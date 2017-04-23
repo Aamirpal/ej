@@ -11,6 +11,7 @@ class CreateUsersTable extends Migration
      * @return void
      */
     public function up() {
+        DB::unprepared('CREATE EXTENSION IF NOT EXISTS "uuid-ossp";');
         Schema::create('users', function (Blueprint $table) {
             $table->uuid('id')->default(DB::raw('uuid_generate_v1()'));
             $table->uuid('user_type_id');
