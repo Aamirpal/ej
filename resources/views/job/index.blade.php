@@ -22,7 +22,7 @@
 <body>
 <a href="show_jobs" class="btn btn-primary">Show Jobs</a>
 <div class="bs-example col-xs-6">
-    <form class="form-horizontal" action="post_job" method="post" encription="multipart">
+    <form class="form-horizontal" action="http://uat-ej.herokuapp.com/post_job" method="post" encription="multipart">
          {{ csrf_field() }}
         <div class="form-group">
             <label for="inputPassword" class="control-label col-xs-2">Job Title</label>
